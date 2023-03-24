@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.main {
+  height: 2000px;
+}
+.navBar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 45px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 5px rgb(196, 196, 196);
+}
+.navBar0 img {
+  width: 53px;
+  height: 50px;
+}
+.navBar1 {
+  display: flex;
+  position: absolute;
+  left: 150px;
+}
+.navBar1 li {
+  padding-right: 25px;
+  font-size: 13px;
+  list-style: none;
+  font-weight: 500;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+.navBar1 > li:nth-child(6) {
+  margin-top: -4px;
+  color: black;
+}
+.navBar1 > a {
+  text-decoration: none;
+}
+.navBar1 > a:visited {
+  color: black;
+}
+.navBar1 > li:nth-child(6) > sup {
+  color: red;
+}
+
+.navBar2 {
+  position: relative;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 4px;
+  margin-left: 430px;
+  width: 30%;
+  background-color: whitesmoke;
+}
+.navBar2 > i {
+  font-size: 15px;
+  margin-left: 10px;
+}
+.navBar2 input {
+  border: none;
+  padding: 10px;
+  width: 300px;
+  outline: none;
+  background-color: whitesmoke;
+  padding-left: 10px;
+}
+.navBar3 {
+  display: flex;
+  list-style: none;
+  position: relative;
+  right: 7%;
+  font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+.navBarLast {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+.navBarLast p {
+  font-weight: 600;
+  padding-top: 3px;
+  font-size: 12px;
+}
+.floater1 {
+  position: fixed;
+  bottom: 15%;
+  right: 2%;
+  /* border: 2px solid red; */
+  background-color: #1d85fc;
+  padding: 20px;
+  border-radius: 50%;
+  height: 4%;
+  color: white;
+  font-size: 25px;
+}
+.product {
+  margin-top: 113px;
+}
+.product > div:nth-child(1) {
+  font-size: 12px;
+  margin-left: 24px;
+}
+.productDetail {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 10px;
+}
+.productImage {
+  width: 58%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.productImage > div {
+  width: 48%;
+  margin-top: 10px;
+}
+.productImage > div:nth-child(5) > img {
+  margin-left: -52%;
+}
+.productImage > div > img {
+  width: 100%;
+}
+.productInfo {
+  width: 38%;
+  /* border: 1px solid red; */
+}
+.productInfo>div:nth-child(1){
+    border-bottom: 1px solid rgb(212, 212, 212);
+    padding-bottom: 10px;
+}
+.productInfo>div:nth-child(1)>div:nth-child(1)>h3 {
+    font-size: 22px;
+    margin-top: 10px;
+}
+.productInfo>div:nth-child(1)>div:nth-child(1)>p {
+    font-size: 17px;
+    opacity: 0.6;
+}
+.productInfo>div:nth-child(1)>div:nth-child(2){
+    display: flex;
+    margin-top: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    width: 30%;
+    justify-content: center;
+    padding: 5px;
+}
+.productInfo>div:nth-child(1)>div:nth-child(2)>b {
+    font-size: 13px;
+}
+.productInfo>div:nth-child(1)>div:nth-child(2)>i {
+    color: green;
+    margin-top: 2px;
+    margin-left: 4px;
+    padding-right: 4px;
+    font-size: 12px;
+    border-right: 2px solid rgb(199, 199, 199);
+}
+.productInfo>div:nth-child(1)>div:nth-child(2)>p {
+    font-size: 13px;
+    margin-left: 4px;
+}
+.productInfo>div:nth-child(2)>div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 53%;
+    align-items: center;
+}
+.productInfo>div:nth-child(2)>div:nth-child(1)>h3 {
+    font-size: 22px;
+}
+.productInfo>div:nth-child(2)>div:nth-child(1)>p {
+    font-size: 18px;
+    opacity: 0.7;
+}
+.productInfo>div:nth-child(2)>div:nth-child(1)>h2 {
+    font-size: 16px;
+    font-weight: bolder;
+    color: orange;
+}
+.productInfo>div:nth-child(2)>div:nth-child(2) {
+    font-size: 14px;
+    font-weight: bolder;
+    color: green;
+    margin-top: 5px;
+}
+.productInfo>div:nth-child(2)>div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.productInfo>div:nth-child(2)>div:nth-child(3)>p:nth-child(1) {
+    font-size: 15px;
+    font-weight: bold;
+}
+.productInfo>div:nth-child(2)>div:nth-child(3)>p:nth-child(2) {
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+    margin-left: 20px;
+}
+.productInfo>div:nth-child(2)>div:nth-child(3)>i {
+    font-size: 12px;
+    color: red;
+    margin-left: 5px;
+}
