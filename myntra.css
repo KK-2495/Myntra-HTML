@@ -37,6 +37,13 @@
 }
 .navBar1>li:nth-child(6) {
   margin-top: -4px;
+  color: black;
+}
+.navBar1>a{
+  text-decoration: none;
+}
+.navBar1>a:visited{
+  color: black;
 }
 .navBar1>li:nth-child(6)>sup{
   color: red;
