@@ -3,7 +3,7 @@
   padding: 0;
 }
 .main {
-  height: 2000px;
+  height: 2500px;
 }
 .navBar {
   width: 100%;
@@ -145,7 +145,7 @@
 .filter {
   border-top: 1px solid rgb(205, 205, 205);
   border-right: 1px solid rgb(205, 205, 205);
-  border-bottom: 1px solid rgb(205, 205, 205);
+  /* border-bottom: 1px solid rgb(205, 205, 205); */
   width: 20%;
 }
 
@@ -172,6 +172,12 @@
 .filterList > div > p {
   font-size: 13px;
 }
+.filterList>p {
+  font-size: 14px;
+  color: red;
+  margin-left: 50px;
+  margin-top: 10px;
+}
 .filterList > div > p > small {
   font-size: 10px;
   opacity: 0.9;
@@ -190,9 +196,65 @@
   border-radius: 50px;
   color: gray;
 }
-
-.images {
+.filter > div:nth-child(4) > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
   width: 80%;
+  margin: auto;
+  align-items: center;
+}
+.filter > div:nth-child(4) > div:nth-child(1) > i {
+  font-size: 14px;
+  background-color: rgb(228, 228, 228);
+  padding: 7px;
+  border-radius: 50px;
+  color: gray;
+}
+.fa-circle {
+  margin-right: 5px;
+  font-size: 15px;
+}
+.filter > div:nth-child(4) >div:nth-child(3)>i{
+  color: blue;
+}
+.filter > div:nth-child(4) >div:nth-child(4)>i{
+  color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  height: 15px;
+}
+.filter > div:nth-child(4) >div:nth-child(5)>i{
+  color: navy;
+}
+.filter > div:nth-child(4) >div:nth-child(6)>i{
+  color: green;
+}
+.filter > div:nth-child(4) >div:nth-child(7)>i{
+  color: red;
+}
+.filter > div:nth-child(4) >div:nth-child(8)>i{
+  color: grey;
+}
+.filter > div:nth-child(6)>p {
+  font-size: 11px;
+  width: 70%;
+  text-align: center;
+  padding: 7px;
+  color: black;
+  border: 1px solid gray;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+.filter > div:nth-child(6)>i{
+  font-size: 10px;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.content>div:nth-child(2) {
+  width: 80%;
+}
+.images {
   border-top: 1px solid rgb(205, 205, 205);
   display: flex;
   flex-wrap: wrap;
@@ -209,13 +271,13 @@
 }
 .images > div > h4 {
   font-size: 15px;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-top: -20px;
 }
 .images > div > p {
   font-size: 13px;
   opacity: 0.8;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .images > div > :nth-child(2) {
   display: flex;
@@ -238,12 +300,11 @@
   border-right: 2px solid;
   padding-right: 3px;
 }
-
 .images > div > :nth-child(5) {
   font-size: 12px;
   display: flex;
   width: 70%;
-  margin-left: 17px;
+  margin-left: 8px;
   align-items: center;
   justify-content: space-around;
 }
@@ -253,4 +314,53 @@
 .images > div > :nth-child(5) > p {
   font-size: 11px;
   color: orange;
+}
+.pages {
+  border-top: 1px solid rgb(205, 205, 205);
+  display: flex;
+  width: 96%;
+  margin: auto;
+  margin-top: 30px;
+}
+.pages>div {
+  margin-top: 20px;
+  text-align: center;
+  align-items: center;
+}
+.pages>div:nth-child(1){
+  font-size: 13px;
+  width: 12%;
+}
+.pages>div:nth-child(2){
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 18%;
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+.pages>div:nth-child(2)>p:nth-child(1){
+  background-color: black;
+  color: white;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.pages>div:nth-child(3){
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10%;
+  width: 10%;
+  border: 1px solid rgb(205, 205, 205);
+  padding: 5px;
+}
+.pages>div:nth-child(3)>i{
+  margin-left: 5px;
+  margin-top: 2px;
+}
+.footer{
+  width: 100%;
+  height: 200px;
+  background-color: #ededed;
+  margin-top: 30px;
 }
