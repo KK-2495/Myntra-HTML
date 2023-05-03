@@ -41,10 +41,9 @@
 }
 .navBar1>a{
   text-decoration: none;
-}
-.navBar1>a:visited{
   color: black;
 }
+
 .navBar1>li:nth-child(6)>sup{
   color: red;
 }
@@ -76,6 +75,7 @@
   right: 7%;
   font-family: Assistant, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica, Arial, sans-serif;
+    align-items: center;
 }
 .navBarLast {
   display: flex;
@@ -87,6 +87,13 @@
   font-weight: 600;
   padding-top: 3px;
   font-size: 12px;
+}
+.navBar3 div button {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
 }
 .floater {
   display: flex;
