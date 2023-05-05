@@ -56,8 +56,8 @@
                             Kook N Keech</strong></p>
                 </div>
                 <div class="productDetail">
-                    <div class="productImage">
-                        <div>
+                    <div class="productImage" id="productImage">
+                        <!-- <div>
                             <img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8923841/2019/6/3/736b9f2c-3a49-41a9-828c-1e0218b62e431559550212164-Minions-by-Kook-N-Keech-Men-Purple-Printed-Round-Neck-T-shir-1.jpg"
                                 alt="">
                         </div>
@@ -76,11 +76,11 @@
                         <div>
                             <img src="https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/8923841/2019/6/3/361af51e-4174-419c-aebc-3bb80120d8f31559550212090-Minions-by-Kook-N-Keech-Men-Purple-Printed-Round-Neck-T-shir-5.jpg"
                                 alt="">
-                        </div>
+                        </div> -->
                     </div>
                     <div class="productInfo">
                         <div>
-                            <div>
+                            <div id="productName">
                                 <h3>Minions by Kook N Keech
                                 </h3>
                                 <p>Men Purple Boxy Fit Printed Round Neck Pure Cotton T-shirt
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div id="productPrice">
                                 <h3>₹659</h3>
                                 <p>MRP <s>₹1099</s> </p>
                                 <h2>(40% OFF)</h2>
@@ -116,7 +116,7 @@
                             <div>
                                 <div>
                                     <i class="fa-solid fa-bag-shopping"></i>
-                                    <p>ADD TO BAG</p>
+                                    <p onclick="addCart()">ADD TO BAG</p>
                                 </div>
                                 <div>
                                     <i class="fa-regular fa-heart"></i>
@@ -506,6 +506,23 @@
                 </div>
             </div>
         </div>
+        <script>
+            window.onload = function(){
+                var product = JSON.parse(localStorage.getItem("singleProduct"));
+                var addImage = document.getElementById("productImage");
+                var addPrice = document.getElementById("productPrice");
+                var addName = document.getElementById("productName");
+                var addedImage = `<div><img src="${product.proImage}"/></div>`;
+                var addedPrice = `<h3>${product.proPrice}</h3>`;
+                var addedName = `<h3>${product.proName}</h3>`;
+                addImage.innerHTML = addedImage;
+                addPrice.innerHTML = addedPrice;
+                addName.innerHTML = addedName;
+            }
+            function addCart(){
+            alert("Adding to cart");
+        }
+        </script>
     </body>
 
 </html>
