@@ -394,3 +394,14 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+
+/* *****media Query******* */
+@media screen and (max-width:770px) {
+  .navBar2{
+      display: none;
+  }
+  .navBar1{
+      display: none;
+  }
+}

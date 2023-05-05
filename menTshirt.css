@@ -267,6 +267,12 @@
   /* border: 1px solid red; */
   margin-top: 20px;
 }
+.proFromJS{
+  width: 22%;
+  height: 380px;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+}
 .images > div > img {
   width: 100%;
 }

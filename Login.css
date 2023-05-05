@@ -47,3 +47,16 @@
     outline: none;
     border: none;
 }
+
+/* *****media Query******* */
+@media screen and (max-width:770px) {
+    .navBar2{
+        display: none;
+    }
+    .navBar1{
+        display: none;
+    }
+    .loginform{
+        width: 70%;
+    }
+}

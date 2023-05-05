@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller</title>
+</head>
+<body>
+    <h2>Add your products here</h2>
+    <form onsubmit="addProduct(event)">
+        <label>Product Name</label><br />
+        <input type="text" id="productName" /><br />
+        <label>Product Price</label><br />
+        <input type="text" id="productPrice" /><br />
+        <label>Product Image url</label><br />
+        <input type="text" id="productImage" /><br />
+        <input type="submit" /><br />
+    </form>
+    <script>
+        function addProduct(event){
+            event.preventDefault();
+            var proName = document.getElementById("productName").value;
+            var proPrice = document.getElementById("productPrice").value;
+            var proImage = document.getElementById("productImage").value;
+            
+            var product = { proName, proPrice, proImage };
+            var addedProducts = JSON.parse(localStorage.getItem("products")) || [];
+            addedProducts.push(product);
+
+            localStorage.setItem("products",JSON.stringify(addedProducts));
+
+            alert("Added Succesfully");
+        }
+    </script>
+</body>
+</html>

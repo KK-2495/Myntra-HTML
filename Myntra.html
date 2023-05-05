@@ -42,7 +42,7 @@
                 <div class="navBar3">
                     <div class="navBarLast">
                         <i class="fa-regular fa-user"></i>
-                        <p>Profile</p>
+                        <p id="userSwitch">Profile</p>
                     </div>
                     <div class="navBarLast">
                         <i class="fa-regular fa-heart"></i>
@@ -52,7 +52,7 @@
                         <i class="fa-solid fa-bag-shopping"></i>
                         <p>Bag</p>
                     </div>
-                    <div>
+                    <div id="logout">
                         <button onclick="window.location.href=`./Login.html`">Log In</button>
                     </div>
                 </div>
@@ -701,7 +701,25 @@
                 </div>
             </div>
         </div>
-
+        <script>
+                        window.onload = function () {
+                var activeUser = JSON.parse(localStorage.getItem("myntraActiveUser"));
+                if (activeUser) {
+                    var showName = document.getElementById("userSwitch");
+                    var logoutswitch = document.getElementById("logout");
+                    var activeUserName = `<h3>${activeUser.mynUser}</h3>`;
+                    var logout = `<button onclick="logout()">Log Out</button>`;
+                    showName.innerHTML = activeUserName;
+                    logoutswitch.innerHTML = logout;
+                } else {
+                    alert("You've Logged out.");
+                }
+            }
+            function logout() {
+                localStorage.removeItem("myntraActiveUser");
+                window.location.reload();
+            }
+        </script>
     </body>
 
 </html>

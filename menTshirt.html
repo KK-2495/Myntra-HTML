@@ -243,8 +243,8 @@
                     </div>
                 </div>
                 <div>
-                    <div class="images">
-                        <div>
+                    <div class="images" id="productList">
+                        <!-- <div>
                             <img src="https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/7546900/2019/1/24/c9be0d6e-30a4-4242-b4e0-1c166b73f2781548320874402-HERENOW-Men-Polo-Collar-T-shirt-4861548320873235-1.jpg"
                                 alt="">
                             <div>
@@ -543,7 +543,10 @@
                                 <b>Rs. 839</b> <s>Rs.1399</s>
                                 <p>(40% OFF)</p>
                             </div>
-                        </div>
+                        </div> -->
+                        
+                        <!-- **********adding products through JS****** -->
+
                     </div>
                     <div class="pages">
                         <div>Page 1 of 1686</div>
@@ -632,7 +635,18 @@
 
 
         </div>
+        <script>
+            window.onload = function() {
+                var displayProducts = document.getElementById("productList");
+            var finalData = "";
 
+            var productsFromSeller = JSON.parse(localStorage.getItem("products"));
+            for(var i=0; i<productsFromSeller.length; i++){
+                finalData += `<div class="proFromJS"><img src=${productsFromSeller[i].proImage} /><h3>${productsFromSeller[i].proName}</h3><p> ${productsFromSeller[i].proPrice}</p></div>`;
+            }
+            displayProducts.innerHTML = finalData;
+            }
+        </script>
     </body>
 
 </html>
