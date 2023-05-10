@@ -76,7 +76,7 @@
 #main>div:nth-child(2)>div:nth-child(1){
     width: 64%;
     border-right: 1px solid #d6d6d6;
-    height: 620px;
+    /* height: 620px; */
 }
 #main>div:nth-child(2)>div:nth-child(1)>div:nth-child(1){
     width: 97%;
@@ -118,7 +118,7 @@
 #main>div:nth-child(2)>div:nth-child(1)>div:nth-child(2) {
     border: 1px solid #d6d6d6;
     width: 97%;
-    height: 90;
+    /* height: 90px; */
     margin-top: 10px;
     border-radius: 3px;
 }
@@ -252,7 +252,7 @@
 }
 #main>div:nth-child(2)>div:nth-child(1)>div:nth-child(5)>div{
     /* border: 1px solid red; */
-    height: 148px;
+    /* height: 148px; */
     margin: 10px 0;
 }
 #main>div:nth-child(2)>div:nth-child(1)>div:nth-child(5)>div:nth-child(1){

@@ -44,7 +44,7 @@
                         <i class="fa-regular fa-heart"></i>
                         <p>Wishlist</p>
                     </div>
-                    <div class="navBarLast">
+                    <div onclick="redirect()" class="navBarLast">
                         <i class="fa-solid fa-bag-shopping"></i>
                         <p>Bag</p>
                     </div>
@@ -116,7 +116,7 @@
                             <div>
                                 <div>
                                     <i class="fa-solid fa-bag-shopping"></i>
-                                    <p onclick="addCart()">ADD TO BAG</p>
+                                    <p id="addToBag">ADD TO BAG</p>
                                 </div>
                                 <div>
                                     <i class="fa-regular fa-heart"></i>
@@ -512,16 +512,36 @@
                 var addImage = document.getElementById("productImage");
                 var addPrice = document.getElementById("productPrice");
                 var addName = document.getElementById("productName");
+                var addBag = document.getElementById("addToBag");
                 var addedImage = `<div><img src="${product.proImage}"/></div>`;
-                var addedPrice = `<h3>${product.proPrice}</h3>`;
+                var addedPrice = `<h3>₹${product.proPrice}</h3>`;
                 var addedName = `<h3>${product.proName}</h3>`;
+                var addToBag = `<p onclick = 'addCart(${JSON.stringify(product)})'>ADD TO BAG</p>`;
                 addImage.innerHTML = addedImage;
                 addPrice.innerHTML = addedPrice;
                 addName.innerHTML = addedName;
+                addBag.innerHTML = addToBag;
             }
-            function addCart(){
-            alert("Adding to cart");
+            function addCart(product){
+            // alert("Adding to cart");
+            var mynUsers = JSON.parse(localStorage.getItem("myntraNewUser"));
+            var mynCurrentUser = JSON.parse(localStorage.getItem("myntraActiveUser"));
+                
+            for(var i=0; i<mynUsers.length; i++){
+                if(mynCurrentUser.mynEmail == mynUsers[i].mynEmail){
+                    if(mynUsers[i].mynProduct == undefined){
+                        mynUsers[i].mynProduct = [product];
+                    }else{
+                        mynUsers[i].mynProduct.push(product);
+                    }
+                    alert("Product Added Succesfully..");
+                }
+            }
+            localStorage.setItem("myntraNewUser",(JSON.stringify(mynUsers)));
         }
+        function redirect(){
+                window.location.href = `./Shopping.html`;
+            }
         </script>
     </body>
 

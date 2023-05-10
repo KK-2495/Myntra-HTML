@@ -5,6 +5,7 @@ function register(event) {
   var email = document.getElementById("userEmail").value;
   var password = document.getElementById("userPassword").value;
   var confirmPassword = document.getElementById("userConfirmPassword").value;
+  var mynProduct = [];
 
   if (name && email && password && confirmPassword) {
     if (password.length >= 8 && confirmPassword.length >= 8) {
@@ -23,14 +24,15 @@ function register(event) {
             mynEmail: email,
             mynPassword: password,
             mynConfirmPassword: confirmPassword,
+            mynProduct,
           };
           mynUsers.push(userInfo);
           localStorage.setItem("myntraNewUser", JSON.stringify(mynUsers));
           alert("Registered Successful.");
-          document.getElementById("userName").value="";
-          document.getElementById("userEmail").value="";
-          document.getElementById("userPassword").value="";
-          document.getElementById("userConfirmPassword").value="";
+          document.getElementById("userName").value = "";
+          document.getElementById("userEmail").value = "";
+          document.getElementById("userPassword").value = "";
+          document.getElementById("userConfirmPassword").value = "";
         } else {
           alert("You're Already Registered with this Email");
           window.location.href = `./Login.html`;
